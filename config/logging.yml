@@ -1,0 +1,14 @@
+rootLogger: INFO, console, file
+path:
+  logs:./logs/
+
+logger:
+  action: DEBUG
+
+appender:
+  file:
+    type: file
+    file: ${path.logs}/${cluster.name}.log
+    layout:
+      type: pattern
+      conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %m%n"

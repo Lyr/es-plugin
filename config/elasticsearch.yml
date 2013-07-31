@@ -1,0 +1,10 @@
+cluster.name: elasticsearch-script_sg-tests
+network.host: 127.0.0.1
+logger: 
+  # log action execution errors for easier debugging
+  action: DEBUG
+path:
+  plugins:./target/classes/
+
+#script.native:
+#  mynativescript.type: com.sg.elasticsearch.nativescript.plugin.CalculateElapsedTime
