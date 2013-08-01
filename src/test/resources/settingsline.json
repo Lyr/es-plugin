@@ -1,11 +1,9 @@
 {
-	"line":{
-		"analysis":{
-			"analyzer":{
-				"default":{
-					"type":"poc_lyr",
-					"date_field_name":"axe_date"
-				}	
+	"analysis":{
+		"analyzer":{
+			"default_index":{
+				"type":"poc_lyr",
+				"date_field_name":"axe_date"
 			}
 		}
 	}

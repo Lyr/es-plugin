@@ -15,6 +15,8 @@ import org.elasticsearch.script.ScriptModule;
 public class CalculateElapsedTime extends AbstractPlugin {
 
 	
+	public static final String SCRIPT_NAME ="get_begin";
+	
     /**
      * The name of the plugin.
      * <p/>
@@ -39,7 +41,7 @@ public class CalculateElapsedTime extends AbstractPlugin {
 
     public void onModule(ScriptModule module) {
         // Register each script that we defined in this plugin
-        module.registerScript("get_begin", GetBeginScript.Factory.class);
+        module.registerScript(SCRIPT_NAME, GetBeginScript.Factory.class);
     }
     
     public void onModule(AnalysisModule module) {

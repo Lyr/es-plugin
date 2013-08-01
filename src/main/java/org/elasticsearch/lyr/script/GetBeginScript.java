@@ -71,8 +71,9 @@ public class GetBeginScript extends AbstractSearchScript {
     	if(doc().containsKey(fieldName)){
     		String field = doc().field(fieldName).getStringValue();
             // Check if field exists
-            if (field != null && field.equals(endFieldValue)) {
-            	doc().field(dateFieldName).stringValue();
+            if (field != null && field.equalsIgnoreCase(endFieldValue) && doc().containsKey(dateFieldName)) {
+            	String brutDate = (String) doc().field(dateFieldName).getStringValue();
+            	System.out.print(brutDate);
                 try {
                     // get the last occurennce of being corresponding of this end event
                 	//doc.get(fieldName);
