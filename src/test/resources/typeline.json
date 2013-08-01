@@ -1,0 +1,13 @@
+{
+	"line":{
+		"properties":{
+			"type_evt":{
+				"type":"string"
+			},
+			"axe_date":{
+				"type":"date"
+			}
+			
+		}
+	}
+}

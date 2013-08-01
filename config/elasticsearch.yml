@@ -1,5 +1,7 @@
 cluster.name: elasticsearch-script_sg-tests
 network.host: 127.0.0.1
+node.local: true
+index.store.type: memory
 logger: 
   # log action execution errors for easier debugging
   action: DEBUG

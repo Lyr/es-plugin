@@ -14,7 +14,9 @@ public class IndexAnalyzerProvider extends AbstractIndexAnalyzerProvider<Timesta
     @Inject
 	public IndexAnalyzerProvider(Index index, @IndexSettings Settings indexSettings, Environment env, @Assisted String name, @Assisted Settings settings) {
         super(index, indexSettings, name, settings);
-        analyzer = new TimestampAnalyzer();
+        String timeFieldName = settings.get("date_field_name", TimestampAnalyzer.DEFAULT_TIME_FIELD_NAME);
+        this.analyzer = new TimestampAnalyzer();
+        this.analyzer.setTimeFieldName(timeFieldName);
 	}
 
 	@Override

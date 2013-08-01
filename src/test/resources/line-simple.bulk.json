@@ -1,0 +1,4 @@
+{"index": {"_index": "test", "_type": "line"} }
+{"type_evt": "BEGIN", "axe_date": "2013-08-01T10:56:05.452Z"}
+{"index": {"_index": "test", "_type": "line" } }
+{"type_evt": "END", "axe_date": "2013-08-01T10:56:07.569Z"}

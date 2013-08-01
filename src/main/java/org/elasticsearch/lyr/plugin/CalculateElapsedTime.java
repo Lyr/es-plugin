@@ -14,6 +14,7 @@ import org.elasticsearch.script.ScriptModule;
  */
 public class CalculateElapsedTime extends AbstractPlugin {
 
+	
     /**
      * The name of the plugin.
      * <p/>
@@ -33,7 +34,7 @@ public class CalculateElapsedTime extends AbstractPlugin {
      */
     @Override
     public String description() {
-        return "Calcualte Elapsed Time in POC_SG log line";
+        return "Calcualte Elapsed Time in POC_LY log line";
     }
 
     public void onModule(ScriptModule module) {
