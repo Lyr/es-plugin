@@ -1,6 +1,6 @@
 {"index": {"_index": "test", "_type": "line", "_id" : "1"} }
-{"type_evt": "BEGIN", "axe_date": "2013-08-01T10:56:05.452Z"}
+{"type_evt": "BEGIN", "axe_date": "2013-08-01T10:56:05.452Z","name_evt":"begin","partial":"dekpo"}
 {"index": {"_index": "test", "_type": "line" , "_id" : "2"} }
-{"type_evt": "END", "axe_date": "2013-08-01T10:56:07.569Z"}
+{"type_evt": "END", "axe_date": "2013-08-01T10:56:07.569Z","name_evt":"end"}
 
 

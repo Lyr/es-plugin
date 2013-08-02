@@ -2,12 +2,30 @@
 	"line":{
 		"properties":{
 			"type_evt":{
-				"type":"string"
+				"type":"string",
+				"store":"yes"
 			},
 			"axe_date":{
-				"type":"date"
+				"type":"date",
+				"store":"yes"
+			},
+			"key_for_evt":{
+				 "fields":{
+                  "name_evt":{
+                     "type":"string",
+                     "store":"yes",
+                     "index":"analyzed"
+                  },
+                  "partial":{
+                     "index":"not_analyzed",
+                     "type":"string", 
+                     "store":"yes"
+                  }
+               },
+               "type":"multi_field",
+               "path": "just_name"
 			}
-			
-		}
+		},
+		"_ttl" : { "enabled" : true, "default" : "30d" }
 	}
 }
