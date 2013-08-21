@@ -5,12 +5,10 @@ import static org.elasticsearch.index.query.QueryBuilders.filteredQuery;
 import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
 
 import java.io.IOException;
-import java.util.Date;
 
 import org.elasticsearch.ElasticSearchException;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.common.xcontent.XContentFactory;
 import org.elasticsearch.lyr.AbstractESTest;
 import org.junit.Before;
 import org.junit.Test;

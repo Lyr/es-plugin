@@ -36,7 +36,7 @@ public class CalculateElapsedTime extends AbstractPlugin {
      */
     @Override
     public String description() {
-        return "Calcualte Elapsed Time in POC_LY log line";
+        return "Calcualte Elapsed Time in POC_PRO log line";
     }
 
     public void onModule(ScriptModule module) {

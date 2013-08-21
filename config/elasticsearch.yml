@@ -8,4 +8,4 @@ index.store.type: memory
 logger: 
   action: DEBUG
 path:
-  plugins:./target/classes/
+  plugins: ./target/classes/

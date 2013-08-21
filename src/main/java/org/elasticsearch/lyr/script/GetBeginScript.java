@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.elasticsearch.ElasticSearchIllegalArgumentException;
 import org.elasticsearch.common.Nullable;
+import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.support.XContentMapValues;
 import org.elasticsearch.script.AbstractSearchScript;
 import org.elasticsearch.script.ExecutableScript;
@@ -73,6 +74,7 @@ public class GetBeginScript extends AbstractSearchScript {
             // Check if field exists
             if (field != null && field.equalsIgnoreCase(endFieldValue) && doc().containsKey(dateFieldName)) {
             	String brutDate = (String) doc().field(dateFieldName).getStringValue();
+            	//XContentBuilder contentBuilder = new XContentBuilder();
             	System.out.print(brutDate);
                 try {
                     // get the last occurennce of being corresponding of this end event

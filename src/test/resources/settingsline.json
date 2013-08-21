@@ -1,10 +1,21 @@
 {
 	"analysis":{
 		"analyzer":{
-			"default_index":{
-				"type":"poc_lyr",
-				"date_field_name":"axe_date"
+			"myk":{
+				"type":"poc_pro_analyzer",
+				"date_field_name":"axe_date.elapsedtime"
+			},
+			"concat":{
+				"tokenizer": "letter",
+				"filter":["lowercase", "asciifolding", "filter-concatenate"]
 			}
-		}
+		},
+	 	"filter": {
+	        "filter-concatenate": {
+	          "type":"poc_pro_tkfilter",
+	          "token_separator": ""
+	        }
+      }
+    }
 	}
 }

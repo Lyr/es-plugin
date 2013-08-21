@@ -9,12 +9,19 @@ import org.apache.lucene.util.Version;
 
 public class TimestampAnalyzer extends Analyzer {
 
-	public static final String DEFAULT_TIME_FIELD_NAME = "_timestamp";
-	private String timeFieldName;
+	protected static final String DEFAULT_TIME_FIELD_NAME = "_timestamp";
+	private String timeFieldName = DEFAULT_TIME_FIELD_NAME;
 
 	@Override
 	public TokenStream tokenStream(String fieldName, Reader reader) {
-		TokenStream out = new  LowerCaseTokenizer(Version.LUCENE_31,reader);
+		TokenStream out = null;
+		if(fieldName.equals(timeFieldName)){
+			//CUSTOM TOKENIZER POSSIBLE
+			out = new EventTokenFilter(new LowerCaseTokenizer(Version.LUCENE_31,reader));
+		}
+		else{
+			out = new  LowerCaseTokenizer(Version.LUCENE_31,reader);
+		}
 		return out;
 	}
 

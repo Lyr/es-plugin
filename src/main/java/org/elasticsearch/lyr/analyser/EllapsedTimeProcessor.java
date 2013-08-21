@@ -1,16 +1,23 @@
 package org.elasticsearch.lyr.analyser;
 
 import org.elasticsearch.index.analysis.AnalysisModule.AnalysisBinderProcessor;
+import org.elasticsearch.lyr.analyser.tokenfilter.ConcatenateTokenFilterFactory;
 
 public class EllapsedTimeProcessor extends AnalysisBinderProcessor {
 
-
-	public static final String KEY_PLUGIN =  "poc_lyr";
+	//This string is used to register the analyzer plugin name which be used 
+	//in the config file like ("type":"poc_pro")
+	public static final String KEY_ANALYZER_PLUGIN =  "poc_pro_analyzer";
+	public static final String KEY_TOKENFILTER_PLUGIN =  "poc_pro_tkfilter";
 	
 	@Override
 	public void processAnalyzers(AnalyzersBindings analyzersBindings) {
-		analyzersBindings.processAnalyzer(KEY_PLUGIN, IndexAnalyzerProvider.class);
-		super.processAnalyzers(analyzersBindings);
+		analyzersBindings.processAnalyzer(KEY_ANALYZER_PLUGIN, IndexAnalyzerProvider.class);
+	}
+
+	@Override
+	public void processTokenFilters(TokenFiltersBindings tokenFiltersBindings) {
+		tokenFiltersBindings.processTokenFilter(KEY_TOKENFILTER_PLUGIN, ConcatenateTokenFilterFactory.class);
 	}
 
 }
