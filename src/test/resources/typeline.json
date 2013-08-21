@@ -21,13 +21,17 @@
 				"type":"multi_field",
 				"path":"just_name",
 				"fields":{
-					"name_evt":{
+					"partial_parsed":{
 						"type":"string",
 						"index":"analyzed"
 					},
-					"partial":{
+					"partialnos":{
 						"type":"string",
 						"analyzer":"concat"
+					},
+					"partial":{
+						"type":"string",
+						"index":"not_analyzed"
 					}
 				}
 			}
