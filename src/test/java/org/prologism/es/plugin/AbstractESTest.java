@@ -1,4 +1,4 @@
-package org.elasticsearch.lyr;
+package org.prologism.es.plugin;
 
 import org.elasticsearch.client.Client;
 import org.elasticsearch.node.Node;
@@ -12,7 +12,9 @@ import com.github.tlrx.elasticsearch.test.annotations.ElasticsearchSetting;
 
 public abstract class AbstractESTest {
 
-	protected final String indexName = "test";
+	protected static final String indexName = "test";
+	protected static final String typeName = "line";
+	public static final String fileBulkName = "line-simple.bulk.json";
 
 	@ElasticsearchNode(name = "node1", settings = {
 			@ElasticsearchSetting(name = "http.enabled", value = "true"),

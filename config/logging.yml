@@ -1,10 +1,9 @@
-rootLogger: INFO, console, file
-path:
-  logs:./logs/
+rootLogger: DEBUG, console
 
 logger:
   action: DEBUG
-
+  org.elasticsearch.client.transport: DEBUG
+  
 appender:
   file:
     type: file
@@ -12,3 +11,11 @@ appender:
     layout:
       type: pattern
       conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %m%n"
+
+index_search_slow_log_file:
+  type: dailyRollingFile
+  file: ${path.logs}/${cluster.name}_index_search_slowlog.log
+  datePattern: "'.'yyyy-MM-dd"
+  layout:
+    type: pattern
+    conversionPattern: "[%d{ISO8601}][%-5p][%-25c] %m%n"

@@ -1,6 +1,8 @@
 {"index": {"_index": "test", "_type": "line", "_id" : "1"} }
-{"type_evt": "BEGIN", "axe_date": "2013-08-01T10:56:05.452Z","name_evt":"begin","partial":"dekpo ede"}
+{"type_evt": "BEGIN", "@timestamp": "2013-08-01T10:56:05.452Z","name_evt":"begin","uid":"123","partial":"dekpo ede"}
 {"index": {"_index": "test", "_type": "line" , "_id" : "2"} }
-{"type_evt": "END", "axe_date": "2013-08-01T10:56:07.569Z","name_evt":"end"}
+{"type_evt": "END", "@timestamp": "2013-08-01T10:56:07.569Z","name_evt":"end","uid":"123"}
+{"index": {"_index": "test", "_type": "line" , "_id" : "3"} }
+{"type_evt": "END", "@timestamp": "2013-08-01T10:56:07.569Z","name_evt":"begin","uid":"456"}
 
 

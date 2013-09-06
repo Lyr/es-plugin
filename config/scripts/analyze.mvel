@@ -18,5 +18,5 @@ if(val != null) {
     terms.add(termAttribute.toString())
   }; 
   tokenStream.close(); 
-} 
+}
 terms

@@ -1,11 +1,11 @@
-cluster.name: elasticsearch-tests
 network.host: 127.0.0.1
 discovery:
   zen:
-    multicast.enabled: false
-node.local: true
-index.store.type: memory
+    multicast.enabled: true
+node.local: false
 logger: 
   action: DEBUG
+  org.elasticsearch.client.transport: DEBUG
 path:
-  plugins: ./target/classes/
+  log: ./logs/
+  plugins: ./target/
