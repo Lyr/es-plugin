@@ -1,0 +1,10 @@
+result='';
+count=0;
+foreach(var1 : doc['@fields.domaine'].values) {
+	if(count<2){	
+		if(var1 == '.'){
+		result+=var1;count++;
+		} 
+	}
+};
+result;
