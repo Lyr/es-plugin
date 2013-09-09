@@ -1,21 +1,16 @@
 package org.prologism.es.plugin.river;
 
-import static org.elasticsearch.index.query.FilterBuilders.scriptFilter;
 import static org.elasticsearch.index.query.QueryBuilders.filteredQuery;
 import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
 
-import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.index.query.FilterBuilder;
 import org.elasticsearch.index.query.FilterBuilders;
-import org.elasticsearch.index.query.TypeFilterBuilder;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.prologism.es.plugin.AbstractESTest;
-import org.prologism.es.plugin.MyPluginRegister;
 import org.testng.AssertJUnit;
 
 import com.github.tlrx.elasticsearch.test.EsSetup;
