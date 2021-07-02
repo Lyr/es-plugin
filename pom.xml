@@ -40,7 +40,7 @@
 	<!-- The Elasticsearch version that the project will be built with -->
 	<!-- ============================================================= -->
 	<properties>
-		<elasticsearch.version>0.20.6</elasticsearch.version>
+		<elasticsearch.version>6.8.15</elasticsearch.version>
 	</properties>
 
 	<!-- ============================================================= -->
